@@ -1,0 +1,29 @@
+{
+  "firestore": {
+    "database": "(default)",
+    "location": "asia-east2",
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "apphosting": {
+    "backendId": "sti-trust-website",
+    "rootDir": "app",
+    "ignore": [
+      "app/node_modules",
+      "app/.next",
+      ".git",
+      "firebase-debug.log",
+      "firebase-debug.*.log"
+    ]
+  },
+  "storage": {
+    "rules": "storage.rules"
+  },
+  "emulators": {
+    "apphosting": {
+      "port": 5002,
+      "rootDirectory": "./",
+      "startCommand": "cd app && npm run dev"
+    }
+  }
+}
