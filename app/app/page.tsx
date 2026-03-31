@@ -1,5 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Home", // This will become "Home | STI Trust Institute" due to the layout template
+  description: "Welcome to STI Trust Institute. Providing top-tier Aviation Education, Skill Programs, and Degree courses. Enroll now to secure your future!",
+};
 
 export default function Home() {
   return (
