@@ -3,8 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
-import SidebarLeft from "@/components/SidebarLeft";
-import SidebarRight from "@/components/SidebarRight";
+import MainLayoutWrapper from "@/components/MainLayoutWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -76,22 +75,9 @@ export default function RootLayout({
           <Header />
           <Navbar />
           
-          <div className="flex flex-col lg:flex-row gap-5 p-4 md:p-5 flex-grow">
-            {/* Left Sidebar */}
-            <aside className="w-full lg:w-[260px] flex-shrink-0">
-              <SidebarLeft />
-            </aside>
-            
-            {/* Main Content */}
-            <main className="flex-1 w-full min-w-0">
-              {children}
-            </main>
-            
-            {/* Right Sidebar */}
-            <aside className="w-full lg:w-[260px] flex-shrink-0">
-              <SidebarRight />
-            </aside>
-          </div>
+          <MainLayoutWrapper>
+            {children}
+          </MainLayoutWrapper>
         </div>
       </body>
     </html>

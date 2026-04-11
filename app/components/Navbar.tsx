@@ -9,7 +9,8 @@ export default function Navbar() {
     { name: 'RESULTS', href: '/results' },
     { name: 'ATC LOGIN', href: '/atc-login' },
     { name: 'PARTNERS', href: '/partners' },
-    { name: 'CONTACT US', href: '/contact-us' }
+    { name: 'CONTACT US', href: '/contact-us' },
+    { name: 'LOGIN', href: '/admin-login'}
   ];
   
   return (
@@ -19,7 +20,7 @@ export default function Navbar() {
           <Link 
             key={link.name} 
             href={link.href} 
-            className="px-5 py-3 md:py-4 xl:px-6 hover:bg-[#3d63bd] hover:text-yellow-300 font-bold text-[13px] sm:text-sm lg:text-[15px] border-r border-[#1a3375] last:border-r-0 transition-colors"
+            className="px-5 py-3 md:py-4 xl:px-6 hover:bg-[#3d63bd] hover:text-yellow-300 font-bold text-[13px] sm:text-sm lg:text-[15px] border-r border-[#1a3375] transition-colors"
           >
             {link.name}
           </Link>
